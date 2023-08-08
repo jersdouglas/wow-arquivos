@@ -15,8 +15,8 @@ body{
     background: #181818;
 }
 header{
-    height: 150px;
-    margin-top: 5%;
+    height: 75px;
+    margin-top: 2.5%;
     text-align: center;
 }
 header h1{
@@ -57,7 +57,15 @@ footer{
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-size: 20px;
     font-style: italic;
+}
+footer p {
+    margin: 0 20px;
+}
+div.linha{
+    margin-top: 3.5%;
+    border-bottom: 2px solid #ccc;
 }
 ::-webkit-scrollbar{
     width: 15px;
@@ -105,8 +113,6 @@ nav{
     position: absolute;
     transition: all.8s;
 }
-
-
 #prints-nav, #videos-nav, #addons-nav, #streams-nav {
     margin-left: 7px;
     padding: 0.8em 1.7em;
@@ -165,6 +171,7 @@ nav{
 input[type="checkbox"]:checked ~ nav{
     transform: translateX(-1680px);
 }
+
 
 
 @media screen and (max-width: 690px){
