@@ -103,7 +103,7 @@ main.video{
     border-radius: 5px;
     margin: 0 10%;
 }
-.container video{
+.container iframe{
     width: 60%;
     margin: 0 20%;
     border-radius: 3%;
