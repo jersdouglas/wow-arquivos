@@ -25,6 +25,7 @@ header{
 }
 header h1{
     margin-top: 20%;
+    margin-bottom: 10%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     font-weight: 9000;
@@ -42,7 +43,8 @@ header h1{
     list-style-type: none;
 }
 .container-aside ul li i{
-    font-size: 30px;
+    margin-bottom: 70px;
+    font-size: 40px;
     color: white;
 }
 .gallery-container{
@@ -164,11 +166,24 @@ div a:hover, div a{
         margin-bottom: 0;
         display: block;
     }
-    
+    main.video{
+        margin: 0 6%;
+    }
     .container-videos-text{
         height: 600px;
         border-radius: 5px;
         width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .container-aside ul{
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+    .container-aside ul li i{
+        margin-right: 40px;
+        font-size: 40px;
     }
 }
 @media screen and (max-width:500px) {
@@ -185,12 +200,5 @@ div a:hover, div a{
         border-radius: 5px;
         width: 400px;
     }
-    .container-aside ul{
-        float: none;
-        display: flex;
-        justify-content: center;
-    }
-    .container-aside ul li i{
-        font-size: 40px;
-    }
+    
 }
