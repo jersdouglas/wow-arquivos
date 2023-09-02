@@ -7,7 +7,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-/*---Clear---*/
+/*--- Clear ---*/
 .clear{
     clear: both;
 }
@@ -15,6 +15,7 @@ body{
     height: 100%;
     background: #181818;
 }
+/*--- Tittle Site ---*/
 header{
     height: 75px;
     margin-left: 25%;
@@ -25,7 +26,7 @@ header{
 }
 header h1{
     margin-top: 20%;
-    margin-bottom: 10%;
+    margin-bottom: 13%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     font-weight: 9000;
@@ -36,17 +37,28 @@ header h1{
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.43);
 }
+/*--- Menu Lateral ---*/
 .container-aside ul{
+    position: fixed;
+    margin-top: 7%;
     float: left;
 }
 .container-aside ul li{
     list-style-type: none;
 }
 .container-aside ul li i{
+    transition: transform 0.10s linear;
     margin-bottom: 70px;
     font-size: 40px;
     color: white;
 }
+.container-aside ul li i:hover{
+    transform: skew(20deg, 10deg);
+}
+.container-aside ul li i:first-child{
+    margin-top: 20px;
+}
+/*--- Home ---*/
 .gallery-container{
     display: flex;
     flex-wrap: wrap;
@@ -69,6 +81,30 @@ header h1{
 .gallery-items:hover{
     transform: scale(1.12);
 }
+/*--- Videos ---*/
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 93%;
+    height: 80vh;
+}
+section h3{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+    font-weight: normal;
+}
+.container iframe{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    width: 100%;
+}
+/*--- Footer ---*/
 footer{
     height: 100px;
     display: flex;
@@ -81,45 +117,17 @@ footer{
 footer p {
     margin: 0 20px;
 }
+/*--- Linha ---*/
 div.linha{
     margin-top: 3.5%;
     border-bottom: 2px solid #ccc;
 }
-main.video{
-    min-width: 380px;
-    width: 90%;
-    border-radius: 10px;
-    margin: 0 5%;
-    background-image: url(../assets/imagens/background_hc.jpg);
-    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+div.linha2{
+    border-bottom: 2px solid #474242;
+    width: 50%;
+    max-width: 900px;
+    margin: 2% 25% 0 25%;
 }
-.container{
-    border-radius: 5px;
-}
-.container iframe{
-    height: 80%;
-    margin: 1% 10% ;
-    width: 80%;
-    border-radius: 3%;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-.container-videos-text{
-    height: 800px;
-    margin: 50px 0 0 0;
-    border-radius: 5px;
-    width: 100%;
-}
-.container-videos-text p{
-    color: white;
-    text-align: center;
-    font-size: 30px;
-}
-
 /*---Scrollbar---*/
 ::-webkit-scrollbar{
     width: 15px;
@@ -158,58 +166,48 @@ div a:hover, div a{
 	color: rgb(255, 255, 255);
 	text-decoration-color: rgba(rgba(255, 0, 0, 0), rgba(0, 128, 0, 0), rgba(0, 0, 255, 0));
 }
+/*--- Keyframe ---*/
+
 /*---Media Screen---*/
 @media screen and (max-width:1080px) {
-    .container iframe{
-        height: 60%;
-        margin: 15% 10%;
-        width: 80%;
-        margin-bottom: 0;
-        display: block;
-    }
-    main.video{
-        margin: 0 6%;
-    }
-    .container-videos-text{
-        height: 600px;
-        border-radius: 5px;
-        width: 100%;
-    }
-}
-@media screen and (max-width:768px) {
     .container-aside ul{
+        position: sticky;
         float: none;
         display: flex;
         justify-content: center;
     }
     .container-aside ul li i{
         margin-right: 40px;
+        margin-bottom: 0;
         font-size: 40px;
+    
+    }.container-aside ul li i:last-child{
+
+    }
+    .container-aside ul li i:first-child{
+        margin-left: 50px;
+    }
+    header h1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:768px) {
+    
+    .container-aside ul li i:first-child{
+        margin-top: none;
+    }
+    .container{
+        justify-content: center;
+        width: 90%;
+        height: 40vh;
+        margin-left: 5%;
     }
 }
 @media screen and (max-width:500px) {
-    .container iframe{
-        height: 80%;
-        margin: 15% 10%;
-        width: 80%;
-        margin-bottom: 0;
-        display: block;
+    div.linha2{
+        margin: 4% 25% 0 25%;
     }
-    
-    .container-videos-text{
-        height: 525px;
-        border-radius: 5px;
-        width: 400px;
-    }
-    
 }
 @media screen and (max-width:430px){
-    .container iframe{
-        height: 50%;
-        width: 80%;
-        display: block;
-    }
-    main.video{
-        width: 100%;
-    }
 }
