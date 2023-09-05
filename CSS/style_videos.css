@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+    --color: #00A97F;
+    --video-streamers: #009900;
+    --imagens: rgb(12, 61, 42);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*--- Videos ---*/
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 25%;
+    width: 50%;
+    height: 50vh;
+    min-height: 20vh;
+    max-height: 70vh;
+}
+section h3{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+    font-weight: normal;
+}
+.container iframe{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    width: 100%;
+}
+/*---Media Screen---*/
+@media screen and (max-width:768px) {
+    .container{
+        justify-content: center;
+        width: 90%;
+        height: 40vh;
+        margin-left: 5%;
+    }
+}
